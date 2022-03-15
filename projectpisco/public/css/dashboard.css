@@ -12,8 +12,9 @@
 }
 
 .menu:hover{
-    background-color: #D7E3BA;
+    background-color: #FF9C00;
     border-radius: 5px;
+    color: white;
 }
 
 .hover:hover{
