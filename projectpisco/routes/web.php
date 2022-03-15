@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ConfiguracionController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\MedidaController;
+use App\Http\Controllers\PresentacionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,5 +22,15 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+// ruta de configuracion 
+Route::resource('configuraciones', ConfiguracionController::class);
+// 
+
+// ruta de las categorias del producto
+Route::resource('categorias', CategoriaController::class);
+// 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+

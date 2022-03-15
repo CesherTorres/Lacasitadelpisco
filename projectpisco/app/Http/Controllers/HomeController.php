@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class HomeController extends Controller
 {
     /**
@@ -27,6 +27,7 @@ class HomeController extends Controller
             case ('1'):
                 return view('template.index');//si es administrador continua al weolcome
             break;
+
         }
     }
 }
