@@ -31,7 +31,7 @@
         {{-- fin breacrumb --}}
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-lg-3 mb-2">
                     <div class="card border border-0">
                         <div class="face face1">
                             <div class="content">
@@ -39,7 +39,7 @@
                                 <h3>Producto</h3>
                             </div>
                         </div>
-                        <div class="face face2 border-top rounded-bottom">
+                        {{-- <div class="face face2 border-top rounded-bottom">
                             <div class="content text-start">
                                 <ul>
                                     <li class="text-success"><a href="{{url('/categorias')}}" class="h5 text-decoration-none">Categoria</a></li>
@@ -49,10 +49,10 @@
                                     <li class="text-success"><a href="" class="h5 text-decoration-none">Presentacion</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-lg-3 mb-5">
                     <div class="card border border-0">
                         <div class="face face1">
                             <div class="content">
@@ -60,13 +60,13 @@
                                 <h3>Movimiento</h3>
                             </div>
                         </div>
-                        <div class="face face2 border-top rounded-bottom">
+                        {{-- <div class="face face2 border-top rounded-bottom">
                             <div class="content text-start">
                                 <ul>
                                     <li class="text-success"><a class="h5 text-decoration-none">Motivo</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
