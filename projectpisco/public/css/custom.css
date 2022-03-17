@@ -38,6 +38,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #768070;
   --bs-primary-rgb: 30, 24, 7;
+  --bs-orange-rgb: 238, 174, 54;
   --bs-secondary-rgb: 255, 156, 0;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 0, 136, 204;
@@ -3215,6 +3216,12 @@ fieldset:disabled .btn {
   color: #fff;
   background-color: #1C3146;
   border-color: #1C3146;
+}
+
+.btn-tercery {
+  color: #fff;
+  background-color: #08090a;
+  border-color: #0c0e11;
 }
 
 .btn-primary:hover {
@@ -8861,7 +8868,10 @@ fieldset:disabled .btn {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
 }
-
+.bg-tercery {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-orange-rgb), var(--bs-bg-opacity)) !important;
+}
 .bg-success {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;

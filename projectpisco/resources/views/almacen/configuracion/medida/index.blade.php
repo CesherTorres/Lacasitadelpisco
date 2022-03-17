@@ -6,7 +6,7 @@
         <!-- Encabezado -->
             <div class="row pt-5">
                 <div class="col-lg-9">
-                    <h1 class="text-azul h2 text-uppercase fw-bold mb-0"> Categoria</h1>
+                    <h1 class="text-azul h2 text-uppercase fw-bold mb-0"> Medida</h1>
                     <p class="text-muted">Configura los principales atributos del producto</p>
                 </div>
                 <div class="col-lg-3 d-flex">
@@ -23,34 +23,34 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item" aria-current="page">Almacen</li>
                     <li class="breadcrumb-item"><a class="text-decoration-none" href="/configuraciones">Configuraciones</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Categoria</li>
+                    <li class="breadcrumb-item" aria-current="page">Abreviatura</li>
                 </ol>
             </div>
         {{-- fin breacrumb --}}
     <div class="row">
         <div class="col-12 col-lg-4">
             <div class="card border-4 borde-top-secondary shadow-sm p-2 mb-3">
-                <form class="form-group" method="POST" action="/categorias">      
+                <form class="form-group" method="POST" action="/medidas">      
                 @csrf
                     <div class="py-1">
-                        <label for="name_id" class="form-label">Nombre<span class="text-danger">*</span></label>
+                        <label for="name_id" class="form-label">Unidad de Medida<span class="text-danger">*</span></label>
                         <input type="text" name="name" id="name_id" class="form-control fw-light form-control-sm" value="{{old('name')}}"  maxLength="100">
                         @error('name')
                             <small class="text-danger">{{$message}}</small>
                         @enderror
                     </div>
                     <div class="py-1">
-                        <label for="name_id" class="form-label">Descripcion<span class="text-danger">*</span></label>
+                        <label for="name_id" class="form-label">Abreviatura<span class="text-danger">*</span></label>
                         <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a comment here" name="descripcion" id="floatingTextarea2" style="height: 80px">{{old('descripcion')}}</textarea>
-                            <label for="floatingTextarea2">Escribe una descripción</label>
+                            <input type="text" name="abreviatura" id="floatingTextarea2" class="form-control fw-light form-control-sm" value="{{old('abreviatura')}}"  maxLength="100">
+                            <label for="floatingTextarea2">Escribe un comentario</label>
                             @error('descripcion')
                                 <small class="text-danger">{{$message}}</small>
                             @enderror
                         </div>
                     </div>
                     <div class="text-center pt-4">
-                        <button type="submit" class="btn btn-tercery px-5 text-white">Registrar categoría</button>   
+                        <button type="submit" class="btn btn-tercery px-5 text-white">Registrar Medida</button>   
                     </div>
                 </form>
             </div>
@@ -58,34 +58,34 @@
         <div class="col-12 col-lg-8">
             <div class="card border-4 borde-top-secondary shadow-sm py-2 mb-5">
                 <div class="card-body">
-                    <h6 class="text-uppercase fw-bold text-center">Lista de categorías</h6>
+                    <h6 class="text-uppercase fw-bold text-center">Lista de Medida</h6>
                     <table id="" class="display table table-hover table-sm py-2" cellspacing="0" style="width:100%">
                         <thead class="bg-light">
                             <tr>
                                 <th class="h6">N°</th>
-                                <th class="h6">Categoría</th>
-                                <th class="h6">Descripción</th>
+                                <th class="h6">Medida</th>
+                                <th class="h6">Abreviatura</th>
                                 <th class="h6 text-center">Acciones</th>
                             </tr>
                         </thead>
                             <tbody>
-                                @foreach($categorias as $categoria)
+                                @foreach($medidas as $medida)
                                     <tr>
-                                        <td class="fw-light align-middle">{{$categoria->id}}</td>
-                                        <td class="fw-light align-middle">{{$categoria->name}}</td>
-                                        <td class="fw-light align-middle">{{$categoria->descripcion}}</td>
+                                        <td class="fw-light align-middle">{{$medida->id}}</td>
+                                        <td class="fw-light align-middle">{{$medida->name}}</td>
+                                        <td class="fw-light align-middle">{{$medida->abreviatura}}</td>
                                         <td class="align-middle">                                        
                                             <div class="text-center">
-                                                <form method="POST" action="{{ route('categorias.destroy',$categoria->slug) }}" class="form-delete">
+                                                <form method="POST" action="{{ route('medidas.destroy',$medida->slug) }}" class="form-delete">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="button" class="btn btn-tercery text-white btn-sm " data-bs-toggle="modal" data-bs-target="#editcategorias{{$categoria->slug}}"><i class="bi bi-pencil-square"></i></button>
+                                                    <button type="button" class="btn btn-tercery text-white btn-sm " data-bs-toggle="modal" data-bs-target="#editmedidas{{$medida->slug}}"><i class="bi bi-pencil-square"></i></button>
                                                     <button type="submit" class="btn btn-tercery text-white btn-sm"><i class="bi bi-trash-fill"></i></button>        
                                                 </form>
                                             </div>    
                                         </td>
                                     </tr>
-                                    @include('almacen.configuracion.categoria.edit')
+                                    @include('almacen.configuracion.medida.edit')
                                 @endforeach
                             </tbody>
                     </table>
@@ -104,7 +104,7 @@
         icon: 'success',
         confirmButtonColor: '#07A683',
         title: '¡Éxito!',
-        text: 'Categoría registrado correctamente',
+        text: 'Medida registrada correctamente',
         })
     </script>
     @endif

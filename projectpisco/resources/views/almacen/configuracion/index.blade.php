@@ -32,45 +32,44 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-3 mb-2">
-                    <div class="card border border-0">
-                        <div class="face face1">
-                            <div class="content">
-                                <img src="/images/licores.png?raw=true" width="200px">
-                                <h3>Producto</h3>
+                        <div class="card border border-0">
+                        <a type="button" class="border-0 text-decoration-none" data-bs-toggle="modal" data-bs-target="#producto">
+                            <div class="face face1">
+                                <div class="content">
+                                    <img src="/images/licores.png?raw=true" width="200px">
+                                    <h3>Producto</h3>
+                                </div>
                             </div>
+                            {{-- <div class="face face2 border-top rounded-bottom">
+                                <div class="content text-start">
+                                    <ul>
+                                        <li class="text-success"><a href="{{url('/categorias')}}" class="h5 text-decoration-none">Categoria</a></li>
+                                        <li class="text-success"><a href="" class="h5 text-decoration-none">Marca</a></li>
+                                        <li class="text-success"><a href="" class="h5 text-decoration-none">Tipo</a></li>
+                                        <li class="text-success"><a href="" class="h5 text-decoration-none">Medida</a></li>
+                                        <li class="text-success"><a href="" class="h5 text-decoration-none">Presentacion</a></li>
+                                    </ul>
+                                </div>
+                            </div> --}}
+                        </a>
                         </div>
-                        {{-- <div class="face face2 border-top rounded-bottom">
-                            <div class="content text-start">
-                                <ul>
-                                    <li class="text-success"><a href="{{url('/categorias')}}" class="h5 text-decoration-none">Categoria</a></li>
-                                    <li class="text-success"><a href="" class="h5 text-decoration-none">Marca</a></li>
-                                    <li class="text-success"><a href="" class="h5 text-decoration-none">Tipo</a></li>
-                                    <li class="text-success"><a href="" class="h5 text-decoration-none">Medida</a></li>
-                                    <li class="text-success"><a href="" class="h5 text-decoration-none">Presentacion</a></li>
-                                </ul>
-                            </div>
-                        </div> --}}
-                    </div>
                 </div>
                 <div class="col-12 col-lg-3 mb-5">
                     <div class="card border border-0">
-                        <div class="face face1">
-                            <div class="content">
-                                <img src="/images/category.png?raw=true">
-                                <h3>Movimiento</h3>
+                        <a type="button" class="border-0 text-decoration-none" data-bs-toggle="modal" data-bs-target="#movimiento">
+                            <div class="face face1">
+                                <div class="content">
+                                    <img src="/images/category.png?raw=true">
+                                    <h3>Movimiento</h3>
+                                </div>
                             </div>
-                        </div>
-                        {{-- <div class="face face2 border-top rounded-bottom">
-                            <div class="content text-start">
-                                <ul>
-                                    <li class="text-success"><a class="h5 text-decoration-none">Motivo</a></li>
-                                </ul>
-                            </div>
-                        </div> --}}
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        @include('almacen.configuracion.showproducto')
+        @include('almacen.configuracion.showmovimiento')
     <!--Fin principal -->
 @endsection
 

@@ -34,7 +34,7 @@
                     <li>
                         <div class="user-info">
                             <div class="text-center">
-                                <img src="images/avatar.png" class="rounded-circle me-2" style="width: 60px;" alt=""/>
+                                <img src="images/avatar.png" class="rounded-circle" style="width: 60px;" alt=""/>
                             </div>
                             <div class="info-container text-white text-center my-2">
                                 <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth()->user()->name}}</div>
@@ -187,11 +187,38 @@
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js" integrity="sha256-7lWo7cjrrponRJcS6bc8isfsPDwSKoaYfGIHgSheQkk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="/js/sweetalert2.all.min.js"></script>
+    <script src="/js/datatables/jquery.dataTables.min.js"></script>
+    <script src="/js/datatables/dataTables.bootstrap5.min.js"></script>
+    <script src="/js/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="/js/datatables/dataTables.responsive.min.js"></script>
     <script>
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
         })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('table.display').DataTable( {
+                responsive: true,
+                fixedHeader: true,
+                "language": {
+                    "lengthMenu": "Mostrar _MENU_ registros",
+                    "zeroRecords": "No se encontró nada, lo siento",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "No hay registros disponibles",
+                    "infoFiltered": "(Filtrado de _MAX_ registros totales)",
+                    "search": "Buscar:",
+                    "paginate":{
+                        "next": "&raquo;",
+                        "previous": "&laquo;"
+                    } 
+                }
+            } );
+        new $.fn.dataTable.FixedHeader( table );
+        } );
     </script>
     @yield('js')
     @stack('scripts')

@@ -29,7 +29,21 @@ Route::resource('configuraciones', ConfiguracionController::class);
 // ruta de las categorias del producto
 Route::resource('categorias', CategoriaController::class);
 // 
-
+// ruta de las medidas del producto
+Route::resource('medidas', MedidaController::class);
+// 
+// ruta de las marcas del producto
+Route::resource('marcas', MarcaController::class);
+// 
+// ruta de las tipos del producto
+Route::resource('tipos', TipoController::class);
+// 
+// ruta de las presentaciones del producto
+Route::resource('presentaciones', PresentacionController::class);
+// 
+// ruta de las presentaciones del producto
+Route::resource('motivos', MotivoController::class);
+// 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
