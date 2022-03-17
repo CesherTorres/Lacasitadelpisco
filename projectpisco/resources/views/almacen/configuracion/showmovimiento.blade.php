@@ -9,7 +9,7 @@
         <ul>
           <div class="row">
             <div class="col-6">
-              <li class="text-success"><a href="" class="text-decoration-none"><h5>Motivo</h5></a></li>
+              <li class="text-success"><a href="/motivos" class="text-decoration-none"><h5>Motivo</h5></a></li>
             </div>
           </div>
         </ul>

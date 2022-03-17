@@ -1,6 +1,6 @@
 @extends('template.index')
 
-@section('title', 'Configuración')
+@section('title', 'Medida')
 @section('content')
     <!-- principal -->
         <!-- Encabezado -->
@@ -23,7 +23,7 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item" aria-current="page">Almacen</li>
                     <li class="breadcrumb-item"><a class="text-decoration-none" href="/configuraciones">Configuraciones</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Abreviatura</li>
+                    <li class="breadcrumb-item" aria-current="page">Medida</li>
                 </ol>
             </div>
         {{-- fin breacrumb --}}

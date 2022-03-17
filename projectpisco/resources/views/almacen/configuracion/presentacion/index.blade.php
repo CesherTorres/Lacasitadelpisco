@@ -1,6 +1,6 @@
 @extends('template.index')
 
-@section('title', 'Configuración')
+@section('title', 'Presentacion')
 @section('content')
     <!-- principal -->
         <!-- Encabezado -->

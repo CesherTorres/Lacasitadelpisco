@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\MedidaController;
 use App\Http\Controllers\PresentacionController;
+use App\Http\Controllers\MotivoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

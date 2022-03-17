@@ -11,11 +11,14 @@ class Tipo extends Model
     protected $table = 'tipos';
     protected $fillable = [
         'name',
-        'slug',
-        'descripcion'
+        'slug'
     ];
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+    public function Motivo()
+    {
+        return $this->hasMany(Motivo::class);
     }
 }

@@ -12,10 +12,15 @@ class Motivo extends Model
     protected $fillable = [
         'name',
         'slug',
+        'tipo_id',
         'descripcion'
     ];
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+    public function tipo()
+    {
+        return $this->belongsTo(Tipo::class);
     }
 }

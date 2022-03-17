@@ -18,6 +18,8 @@ class CreateMotivosTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('descripcion')->nullable();
+            $table->unsignedBigInteger('tipo_id');
+            $table->foreign('tipo_id')->references('id')->on('tipos')->onDelete('cascade');
             $table->timestamps();
         });
     }

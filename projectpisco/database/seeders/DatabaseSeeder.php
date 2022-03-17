@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(TipousuarioTableSeeder::class);
         $this->call(AdministradorPiscoSeeder::class);
+        $this->call(TipomovimientoSeeder::class);
     }
 }
