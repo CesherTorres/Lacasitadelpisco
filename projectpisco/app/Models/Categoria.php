@@ -18,4 +18,8 @@ class Categoria extends Model
     {
         return 'slug';
     }
+    public function productos()
+    {
+        return $this->hasOne(Producto::class);
+    }
 }

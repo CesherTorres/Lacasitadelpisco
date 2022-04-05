@@ -18,4 +18,8 @@ class Presentacion extends Model
     {
         return 'slug';
     }
+    public function productos()
+    {
+        return $this->hasMany(Producto::class);
+    }
 }

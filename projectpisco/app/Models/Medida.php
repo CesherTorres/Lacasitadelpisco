@@ -19,4 +19,8 @@ class Medida extends Model
     {
         return 'slug';
     }
+    public function productos()
+    {
+        return $this->hasOne(Producto::class);
+    }
 }

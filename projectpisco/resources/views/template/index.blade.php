@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/custom.css">
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.0/css/fixedHeader.bootstrap.min.css">
@@ -34,7 +35,7 @@
                     <li>
                         <div class="user-info">
                             <div class="text-center">
-                                <img src="images/avatar.png" class="rounded-circle" style="width: 60px;" alt=""/>
+                                <img src="images/{{Auth()->user()->avatar}}" class="rounded-circle" style="width: 60px;" alt=""/>
                             </div>
                             <div class="info-container text-white text-center my-2">
                                 <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Auth()->user()->name}}</div>
@@ -89,7 +90,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/movimientos" class="nav-link px-3 menu">
+                                        <a href="/ingresos" class="nav-link px-3 menu">
                                             <span>
                                                 <i class="bi bi-circle me-2"></i>
                                             </span>

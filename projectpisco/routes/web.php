@@ -7,6 +7,10 @@ use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\MedidaController;
 use App\Http\Controllers\PresentacionController;
 use App\Http\Controllers\MotivoController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\IngresoController;
+use App\Http\Controllers\DetalleingresoController;
+use App\Http\Controllers\InventarioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,8 +46,17 @@ Route::resource('tipos', TipoController::class);
 // ruta de las presentaciones del producto
 Route::resource('presentaciones', PresentacionController::class);
 // 
-// ruta de las presentaciones del producto
+// ruta de las motivo del movimiento
 Route::resource('motivos', MotivoController::class);
+// 
+// ruta del producto
+Route::resource('productos', ProductoController::class);
+// 
+// ruta de las ingresos del movimiento
+Route::resource('ingresos', IngresoController::class);
+Route::get('/entrada/producto', [App\Http\Controllers\IngresoController::class, 'getProducto']);
+Route::get('/entrada/medida', [App\Http\Controllers\IngresoController::class, 'getMedida']);
+
 // 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
